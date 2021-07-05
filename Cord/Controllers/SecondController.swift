@@ -9,7 +9,7 @@ import UIKit
 
 class SecondController: UIViewController {
     var coordinator: SecondCoordinator?
-    
+
     let startButton: UIButton = {
         let button = UIButton()
         button.setTitle("Return to FirstController", for: .normal)
@@ -25,14 +25,14 @@ class SecondController: UIViewController {
         
         setupUI()
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         NSLayoutConstraint.activate([
             startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            startButton.widthAnchor.constraint(equalToConstant: 150),
+            startButton.widthAnchor.constraint(equalToConstant: 200),
             startButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }

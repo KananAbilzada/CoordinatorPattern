@@ -49,7 +49,7 @@ extension FirstController {
     
     @objc
     private func startTapped (_ sender: UIButton) {
-        coordinator?.showSecondController()
+        coordinator?.showSecondController(with: "SecondController")
     }
     
     

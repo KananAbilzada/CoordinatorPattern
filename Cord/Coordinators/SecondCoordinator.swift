@@ -10,18 +10,22 @@ import UIKit
 class SecondCoordinator: Coordinator {
     var navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+    var navigationTitle: String
+    
+    init(navigationController: UINavigationController, title: String) {
         self.navigationController = navigationController
+        self.navigationTitle      = title
     }
     
     func start() {
         let vc = SecondController()
-        vc.coordinator = self
+        vc.coordinator          = self
+        vc.navigationItem.title = navigationTitle
         navigationController.pushViewController(vc, animated: true)
     }
     
     func dismiss() {
-        navigationController.dismiss(animated: true, completion: nil)
+        navigationController.popViewController(animated: true)
     }
 
 }

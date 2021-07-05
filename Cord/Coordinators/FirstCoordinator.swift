@@ -19,11 +19,11 @@ class FirstCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
-
     
-    func showSecondController() {
-        let secondCoordinator = SecondCoordinator(navigationController: navigationController)
+    
+    func showSecondController(with title: String) {
+        let secondCoordinator = SecondCoordinator(navigationController: navigationController, title: title)
         secondCoordinator.start()
     }
-    
+
 }
